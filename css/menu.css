@@ -1,0 +1,130 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+font-family: 'Roboto', sans-serif;
+display: flex;
+align-items: center;
+flex-direction: column;
+max-width: 768px;
+}
+
+section{
+    background-color: white;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo img {
+    display: flex;
+    width: 300px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.image img {
+    display: flex;
+    width: 768px;
+    height: 300px;
+    object-fit: cover;
+}
+
+h1 {
+    margin-left: 90px;
+    border-radius: 75px 75px;
+    background-color: white;
+    width: 668px;
+    padding: 40px;
+}
+
+.commander {
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.commander strong {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    font-size: 28px;
+    border-radius: 75px 75px;
+    padding: 20px;
+    color: white;
+    background: linear-gradient(#ef74da,#9f5adc);;
+    width: 350px;
+    height: 40px;
+    box-shadow: 1px 1px 33px grey;
+}
+
+.entrees ul {
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 25px;
+    border-radius: 25px;
+    padding: 40px 0 40px 0;
+    margin: 50px;
+    background-color: #f6f6f6;
+    width: 580px;
+    height: 40px;
+    box-shadow: 1px 1px 33px grey;
+}
+
+.plats ul {
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 25px;
+    border-radius: 25px;
+    padding: 40px 0 40px 0;
+    margin: 50px;
+    background-color: #f6f6f6;
+    width: 580px;
+    height: 40px;
+    box-shadow: 1px 1px 33px grey;
+}
+
+.desserts ul {
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 25px;
+    border-radius: 25px;
+    padding: 40px 0 40px 0;
+    margin: 50px;
+    background-color: #f6f6f6;
+    width: 580px;
+    height: 40px;
+    box-shadow: 1px 1px 33px grey;
+}
+
+.lapalette ul li {
+    list-style-type: none;
+}
+
+footer {
+    background-color: #353535;
+    padding: 0 0 20px 100px ;
+    width: 630px;
+}
+
+footer .logo img {
+    padding: 20px 0 0 40px;
+    color: white;
+    width: 170px;
+    height: auto;
+}
+
+footer ul li {
+    list-style-type: none;
+    font-size: 25px;
+    color: white;
+    padding: 5px;
+}
