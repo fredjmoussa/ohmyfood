@@ -326,6 +326,14 @@ figcaption ul {
     margin: 2px 0 -10px -20px;
 }
 
+figcaption ul li strong {
+    font-weight: 600;
+}
+
+figcaption ul li light {
+    font-weight: 200;
+    margin-left: -30px;
+}
 
 .restaurant-container figure ul li i {
     padding: 5px 20px 20px 0;
