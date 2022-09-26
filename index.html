@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+    <div class="loader"></div>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.O">
@@ -9,9 +10,16 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     </head>
-    <body> 
+    <body onload="myFunction()" style="margin:0;">
+
+            <div id="loader"></div>
+            
+            <div style="display:none;" id="myDiv" class="animate-bottom">
+              
         <header>
             <div class="logo">
                 <a href="ohmyfood.png">
@@ -39,7 +47,7 @@
                          </li>
                     </ul>
                 </div> 
-                <div class="decouvrer">
+                <div class="decouvrez">
                     <ul>
                         <li>
                             Découvrez des restaurants d'exception,
@@ -55,7 +63,6 @@
             </div>    
             <h1>Fonctionnement</h1>
             <div class="etapes">
-                <div>
                     <div class="mobile">
                         <div class="number">
                             <strong>1</strong>
@@ -65,8 +72,6 @@
                         </div>
                         <strong>Choisissez un restaurant</strong>
                     </div>
-                </div>
-                <div>
                     <div class="compose">
                         <div class="number">
                             <strong>2</strong>
@@ -76,8 +81,6 @@
                         </div>
                         <strong>Composez votre menu</strong>
                     </div>
-                </div>
-                <div>
                     <div class="deguste">
                         <div class="number">
                             <strong>3</strong>
@@ -87,12 +90,13 @@
                         </div>
                         <strong>Dégustez au restaurant</strong>
                     </div>
-                </div>
+            </div>
                 <div class="lesrestaurants">                
                     <div class="restaurants">
                         <h2>Restaurants</h2>
                         <div class="restaurant-container">
                             <figure>
+                                <a href="menu1.html"></a>
                                 <div class="nouveau">
                                     <strong>Nouveau</strong>
                                 </div>
@@ -107,18 +111,22 @@
                                     </ul>        
                                         <div>   
                                             <ul>
-                                                <li><i class="fa-regular fa-heart"></i></li>
+                                                <li>
+                                                     <i class="fa-regular fa-heart"></i>
+                                                     <i class="fa-solid fa-heart"></i>
+                                                </li>
                                             </ul>
                                         </div> 
                                 </div>
                                 </figcaption>
                             </figure>
                             <figure>
+                                <a href="menu2.html"></a>
                                 <div class="nouveau">
                                     <strong>Nouveau</strong>
                                 </div>
                                 <div class="restaurant-items">
-                                    <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="La note enchantée">
+                                    <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
                                 </div>
                                 <figcaption>
                                 <div class="title">
@@ -128,15 +136,19 @@
                                     </ul>        
                                         <div>   
                                             <ul>
-                                                <li><i class="fa-regular fa-heart"></i></li>
+                                                <li>
+                                                    <i class="fa-regular fa-heart"></i>
+                                                     <i class="fa-solid fa-heart"></i>
+                                                </li>
                                             </ul>
                                         </div> 
                                 </div>
                                 </figcaption>
                             </figure>
                             <figure>
+                                <a href="menu3.html"></a>
                                 <div class="restaurant-items">
-                                    <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="À la française">
+                                    <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
                                 </div>
                                 <figcaption>
                                 <div class="title">
@@ -146,15 +158,19 @@
                                     </ul>        
                                         <div>   
                                             <ul>
-                                                <li><li><i class="fa-regular fa-heart"></i></li>
+                                                <li>
+                                                    <i class="fa-regular fa-heart"></i>
+                                                     <i class="fa-solid fa-heart"></i>
+                                                </li>
                                             </ul>
                                         </div> 
                                 </div>
                                 </figcaption>
                             </figure>
                             <figure>
+                                <a href="menu4.html"></a>
                                 <div class="restaurant-items">
-                                    <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Le délice des sens">
+                                    <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
                                 </div>
                                 <figcaption>
                                 <div class="title">
@@ -164,7 +180,10 @@
                                     </ul>        
                                         <div>   
                                             <ul>
-                                                <li><li><i class="fa-regular fa-heart"></i></li>
+                                                <li>
+                                                    <i class="fa-regular fa-heart"></i>
+                                                     <i class="fa-solid fa-heart"></i>
+                                                </li>
                                             </ul>
                                         </div> 
                                 </div>
@@ -173,19 +192,33 @@
         </section>                    
         <footer>
             <div class="logo">
-                <a href="ohmyfood.png">
-                    <img src="images/logo/ohmyfood.png" alt="Ohmyfood">
-                </a>
-            </div>            
+                <h2>ohmyfood</h2>
+            </div> 
             <div class="aboutohmyfood">
                 <ul>
                     <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
-                    <li><i class="fa-solid fa-handshake-angle"></i>Devenir un partenaire</li>                        <li>Mentions légales</li>
+                    <li><i class="fa-solid fa-handshake-angle"></i>Devenir un partenaire</li>                        
                     <li>Mentions légales</li>
-                    <li>Contact</li>
+                    <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
                 </ul>
             </div>
        </footer> 
+
+    </div>
+            
+    <script>
+    var myVar;
+    
+    function myFunction() {
+      myVar = setTimeout(showPage, 3000);
+    }
+    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+    </script>
+
     </body> 
 </html>
 

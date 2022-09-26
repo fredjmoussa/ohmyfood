@@ -2,12 +2,57 @@ html {
     box-sizing: border-box;
 }
 
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f5edff;
+    border-top: 16px solid #9356dc;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+  
+  #myDiv {
+    display: none;
+    text-align: center;
+  }
+  
+
 body {
-font-family: 'Roboto', sans-serif;
-display: flex;
-align-items: center;
-flex-direction: column;
-max-width: 768px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    max-width: 768px;
+    margin: -8px;
 }
 
 section{
@@ -22,30 +67,37 @@ header {
 }
 
 section .lesrestaurants img {
-    max-width: 100%;
-    height: 300px;
+    max-width: 101%;
+    height: 240px;
     object-fit: cover;
-    border-radius: 25px 25px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
 }
 
-.logo img {
+header .logo img {
     display: flex;
-    width: 100%;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    justify-content: space-around;
+    width: 45%;
+    margin-top: 10px;
+}
+
+a {
+    display: flex;
+    justify-content: space-around;
 }
 
 .location {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    padding: 15px 20px 25px 0;
-    background-color: #d9d9d9;
+    padding: 16px 20px 16px 0;
+    background-color: #eaeaea;
+
+    box-shadow: inset 0px 10px 3px #e1dfdf;
 }
 
 .city {
     padding-left: 15px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .descriptions {
@@ -54,8 +106,11 @@ section .lesrestaurants img {
 }
 
 .reserver {
-    margin-top: 0px;
-    font-size: 40px;
+    margin-left: -50px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 28px;
+    font-weight: 600;
 }
 
 .reserver ul li {
@@ -64,16 +119,17 @@ section .lesrestaurants img {
     list-style-type: none;
 }
 
-.decouvrer {
-    padding-bottom: 40px;
+.decouvrez {
+    margin: -20px 0 40px 0;
 }
 
-.decouvrer ul li {
+.decouvrez ul li {
+    margin-left: -50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     list-style-type: none;
     font-weight: 100;
-    font-size: 33px;
+    font-size: 18px;
 }
 
 .explorer {
@@ -86,99 +142,145 @@ section .lesrestaurants img {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 300;
-    font-size: 28px;
+    font-weight: 400;
+    font-size: 17px;
     border-radius: 75px 75px;
-    padding: 20px;
+    padding: 10px 10px 10px 10px;
     color: white;
     background: linear-gradient(#ef74da,#9f5adc);;
-    width: 350px;
-    height: 40px;
+    width: 220px;
+    height: 30px;
     box-shadow: 1px 1px 33px grey;
 }
 
 .number {
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 16px;
     border-radius: 75px;
-    padding: 15px;
+    padding: 7px;
     color: white;
     background-color:  #9356dc;
-    width: 10x;
+    width: 10px;
     height: 10px;
-    margin-left: -20px;
+    margin-left: -10px;
 }
 
 h1 {
-    font-size: 40px;
-    margin: 50px 0 20px 50px;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 24px;
+    margin: 50px 0 20px 40px;
 }
 
-.etapes {
+.materialmobile {
+    display: flex;
+    padding:0 20px 0 20px;
+    font-size: 20px;
+    color: grey;
 }
 
 .mobile{
     display: flex;
     justify-content: left;
+    align-items: center;
     font-weight: 300;
-    font-size: 25px;
+    font-size: 17px;
     border-radius: 25px;
-    padding: 40px 0 40px 0;
-    margin: 50px;
+    padding: 25px 0 25px 0;
+    margin: 40px;
     background-color: #f6f6f6;
-    width: 100%;
-    height: 40px;
+    width: 80%;
     box-shadow: 1px 1px 33px grey;
 }
 
-.materialmobile {
+.mobile:hover {
+    color: #9356dc;
+    background-color: #f5edff ;
+    transition: background-color 0.7s, color 0.7s;
+    box-shadow: 1px 1px 33px rgb(21, 21, 21);
+}
+
+.mobile:hover .materialmobile {
+    color: #9356dc;
+    background-color: #f5edff ;
+    transition: background-color 0.7s, color 0.7s;
+}
+
+.materialcompose {
     display: flex;
-    padding:0 40px 0 70px;
-    font-size: 30px;
+    padding:0 20px 0 20px;
+    font-size: 20px;
+    color: grey;
 }
 
 .compose {
     display: flex;
     justify-content: left;
+    align-items: center;
     font-weight: 300;
-    font-size: 25px;
+    font-size: 17px;
     border-radius: 25px;
-    padding: 40px 0 40px 0;
-    margin: 50px;
+    padding: 25px 0 25px 0;
+    margin: 40px;
     background-color: #f6f6f6;
-    width: 100%;
-    height: 40px;
+    width: 80%;
     box-shadow: 1px 1px 33px grey;
 }
 
-.materialcompose {
-    padding:0 40px 0 70px;
-    font-size: 30px;
+.compose:hover {
+    color: #9356dc;
+    background-color: #f5edff ;
+    transition: background-color 0.7s, color 0.7s;
+    box-shadow: 1px 1px 33px rgb(21, 21, 21);
+}
+
+.compose:hover .materialcompose {
+    color: #9356dc;
+    background-color: #f5edff ;
+    transition: background-color 0.7s, color 0.7s;
+}
+
+.materialshop {
+    display: flex;
+    padding:0 20px 0 20px;
+    font-size: 20px;
+    color: grey;
 }
 
 .deguste {
     display: flex;
     justify-content: left;
+    align-items: center;
     font-weight: 300;
-    font-size: 25px;
+    font-size: 17px;
     border-radius: 25px;
-    padding: 40px 0 40px 0;
-    margin: 50px;
-    background-color: #f5edff;
-    width: 100%;
-    height: 40px;
+    padding: 25px 0 25px 0;
+    margin: 40px 40px 70px 40px;
+    background-color: #f6f6f6;
+    width: 80%;
     box-shadow: 1px 1px 33px grey;
 }
 
-.materialshop {
-    padding:0 40px 0 70px;
-    font-size: 30px;
+.deguste:hover {
     color: #9356dc;
+    background-color: #f5edff ;
+    transition: background-color 0.7s, color 0.7s;
+    box-shadow: 1px 1px 33px rgb(21, 21, 21);
+    transition: background-color 0.7s, color 0.7s;
+}
+
+.deguste:hover .materialshop {
+    color: #9356dc;
+    background-color: #f5edff ;
+    transition: background-color 0.7s, color 0.7s;
 }
 
 h2 {
-    font-size: 40px;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 25px;
+    margin: 50px 0 30px 40px;
 }
 
 .restaurants ul li {
@@ -186,39 +288,86 @@ h2 {
 }
 
 .lesrestaurants {
-    margin-top: 30px;
-    padding: 50px 0 0 50px;
+    padding-top: 10px;
     background-color:#f6f6f6;
+    width: 100%;
+    margin-left: -8px;
 }
 
-.lesrestaurants img {
+section .lesrestaurants img {
     width: 100%;
+    height: 180px;
 }
 
 .lesrestaurants figure {
-    border-radius: 25px 25px;
+    width: 85%;
+    height: 250px;
+    border-radius: 15px 15px;
+    background-color: white;
     box-shadow: 1px 1px 33px grey;
-    margin-bottom: 30px;
+}
+
+.lesrestaurants figure a {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 figcaption .title {
     display: flex;
     justify-content: space-between;
+    padding: 1px;
 }
 
-.restaurant-container figure ul li {
-    display: flex;
-    font-size: 30px;
+figcaption ul {
+    margin: 2px 0 -10px -20px;
 }
+
 
 .restaurant-container figure ul li i {
-    padding: 20px 45px 20px 0;
-    font-size: 35px;
+    padding: 5px 20px 20px 0;
+    font-size: 25px;
+    position: relative;
+    z-index: 3;
+}    
+
+
+.restaurant-container .fa-regular i {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
-.restaurant-container figure ul li i:hover {
-    color: #9356dc;
+.restaurant-container .fa-regular {
+    display: block;
 }
+
+.restaurant-container .fa-solid {
+    display: block;
+    opacity: 0;
+    margin-top: -50px;
+}
+
+.restaurant-container .fa-solid:hover {
+    display: block;
+    color: #9f5adc;
+    /*
+    background-image: linear-gradient(to top, #9f5adc, #ef74da);
+    background-clip: text;
+    color: transparent;
+    */
+    opacity: 1;
+    margin-top: -50px;
+    transition: opacity 1s;  
+    opacity: 1;
+}
+
 
 figure {
     position: relative;
@@ -237,27 +386,41 @@ figure {
     background-color:#99e2d0;
     width: 80px;
     height: 10px;
-    margin-left: 480px;
-    background-image: ;
-    z-index: 10;
 }
 
 footer {
     background-color: #353535;
-    padding: 0 0 20px 100px ;
+    padding: 0px 0 100px 0px ;
     width: 100%;
+    margin-top: 50px;
 }
 
-footer .logo img {
-    padding: 20px 0 0 40px;
-    color: white;
-    width: 50%;
+footer .logo {
+    font-family: 'Shrikhand', cursive;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -25px;
+    margin-bottom: -25px;
+    width: 150px;
     height: auto;
+    margin-left: 5px;
+    color: white;
 }
 
 footer ul li {
+    display: flex;
+    justify-content: flex-start;
     list-style-type: none;
-    font-size: 25px;
+    font-size: 23px;
     color: white;
     padding: 5px;
+}
+
+footer ul li a {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    text-decoration:none;
+    font-size: 23px;
+    color: white;
 }
